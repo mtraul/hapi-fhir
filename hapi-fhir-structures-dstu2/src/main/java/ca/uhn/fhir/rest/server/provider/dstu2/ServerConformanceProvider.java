@@ -176,6 +176,7 @@ public class ServerConformanceProvider implements IServerConformanceProvider<Con
 
 		Rest rest = retVal.addRest();
 		rest.setMode(RestfulConformanceModeEnum.SERVER);
+                rest.getSecurity().setService(RestfulSecurityServiceEnum.SMART_ON_FHIR);
 
 		Set<SystemRestfulInteractionEnum> systemOps = new HashSet<SystemRestfulInteractionEnum>();
 		Set<String> operationNames = new HashSet<String>();
